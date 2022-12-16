@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Movie;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/movies', [PageController::class, 'index'])->name('movies.index');
 
-Route::get('/movies/{movie}', function ($movie) {
-    return view('movies.show');
+
+Route::get('/movies/{index}', function ($index) {
+    $movies = Movie::all();
+    return view('movies.show', compact('movies', 'index'));
 })->name('movies.show');
