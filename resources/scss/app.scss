@@ -1,0 +1,20 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'partials/header';
+@import 'partials/home';
+@import 'partials/movies';
+
+
+body{
+    background-color: rgb(36, 36, 36);
+    color: rgb(217, 217, 217);
+}
+a{
+    text-decoration: none;
+    color: rgb(217, 217, 217);
+    &:hover{
+        color: white;
+    }
+}
+button:hover{
+    box-shadow: 0 0 5px 2px rgb(123, 83, 83);
+}
